@@ -1,7 +1,22 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 function Navbar() {
+  const [showWelcome, setShowWelcome] = useState(false);
+  const user = localStorage.getItem("user");
+
+  useEffect(() => {
+    const welcomeShown = sessionStorage.getItem("welcomeShown");
+    if (user && !welcomeShown) {
+      setShowWelcome(true);
+      sessionStorage.setItem("welcomeShown", "true");
+      setTimeout(() => {
+        setShowWelcome(false);
+      }, 5000);
+    }
+  }, [user]);
+
   const linkStyle = {
     color: "white",
 
@@ -79,6 +94,21 @@ function Navbar() {
         </h1>
       </div>
 
+      {/* WELCOME MESSAGE */}
+      {showWelcome && user && (
+        <div
+          style={{
+            color: "#ffcc99",
+            fontSize: "24px",
+            fontWeight: "bold",
+            animation: "fadeInOut 5s forwards",
+            textAlign: "center",
+          }}
+        >
+          Welcome, {user.split('@')[0]}!
+        </div>
+      )}
+
       {/* NAV LINKS */}
 
       <div
@@ -118,6 +148,7 @@ function Navbar() {
             style={{ ...linkStyle, cursor: "pointer", color: "#ff4d4d" }} 
             onClick={() => {
               localStorage.removeItem("user");
+              sessionStorage.removeItem("welcomeShown");
               window.location.href = "/login";
             }}
           >
@@ -135,6 +166,13 @@ function Navbar() {
 
             text-shadow:
               0 0 15px #ff6600;
+          }
+
+          @keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(-15px); }
+            10% { opacity: 1; transform: translateY(0); }
+            90% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-15px); }
           }
         `}
       </style>
