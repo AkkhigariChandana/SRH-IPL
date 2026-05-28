@@ -111,6 +111,19 @@ function Navbar() {
         <Link className="nav-link" style={linkStyle} to="/poll">
           Poll
         </Link>
+
+        {localStorage.getItem("user") && (
+          <span 
+            className="nav-link" 
+            style={{ ...linkStyle, cursor: "pointer", color: "#ff4d4d" }} 
+            onClick={() => {
+              localStorage.removeItem("user");
+              window.location.href = "/login";
+            }}
+          >
+            Logout
+          </span>
+        )}
       </div>
 
       {/* HOVER EFFECT */}
