@@ -94,10 +94,10 @@ function Login() {
       <div
         style={{
           position: "absolute",
-          top: 0,
+          top: 90,
           left: 0,
           width: "100%",
-          height: "100%",
+          height: "99%",
           backgroundImage: `url(${loginBg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
