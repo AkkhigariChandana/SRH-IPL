@@ -83,34 +83,31 @@ function Login() {
   return (
     <div
       style={{
-        position: "relative",
         minHeight: "100vh",
-        color: "white",
+        display: "flex",
+        flexDirection: "column",
         backgroundColor: "#000",
-        overflowX: "hidden",
+        color: "white",
       }}
     >
-      {/* BACKGROUND IMAGE */}
+      {/* NAVBAR AT THE VERY TOP */}
+      <Navbar />
+
+      {/* REMAINDER OF SCREEN (BACKGROUND + LOGIN BOX) */}
       <div
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
+          flex: 1,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
           backgroundImage: `url(${loginBg})`,
           backgroundSize: "cover",
-          backgroundPosition: "top center",
+          backgroundPosition: "center top",
           backgroundRepeat: "no-repeat",
-          opacity: 1, // Full opacity so the players are fully visible
-          zIndex: 0,
+          padding: "20px",
         }}
-      ></div>
-
-      <div style={{ position: "relative", zIndex: 1 }}>
-        <Navbar />
-
-        <div style={{ perspective: "1000px", marginTop: "40px", display: "flex", justifyContent: "center" }}>
+      >
+        <div style={{ perspective: "1000px", width: "100%", display: "flex", justifyContent: "center" }}>
           <div
             style={{
               width: "100%",
