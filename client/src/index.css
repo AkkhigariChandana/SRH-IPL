@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+  background: #ff8533 !important;
+}
+
+.player-card {
+  transition: 0.4s;
+}
+
+.player-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px rgba(255, 102, 0, 1) !important;
+}
+
+.news-card {
+  transition: 0.4s;
+}
+
+.news-card:hover {
+  transform: scale(1.03);
+}
+
+.schedule-card {
+  transition: 0.4s;
+}
+
+.schedule-card:hover {
+  transform: scale(1.02);
+  border: 1px solid #ff8533 !important;
+}

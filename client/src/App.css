@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* PLAYER CARD */
+
+.player-card {
+  transition: 0.4s;
+}
+
+.player-card:hover {
+  transform: translateY(-10px) scale(1.03);
+
+  box-shadow:
+    0 0 20px #ff6600,
+    0 0 40px #ff6600;
+}
+
+/* BUTTON */
+
+.player-btn {
+  transition: 0.3s;
+}
+
+.player-btn:hover {
+  background: white !important;
+  color: #ff6600 !important;
+  transform: scale(1.05);
+}
+
+/* NAVBAR LINKS */
+
+.nav-link {
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #ff6600 !important;
+}
+
+/* FADE ANIMATION */
+
+.fade-in {
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* FLOAT EFFECT */
+
+.float-card {
+  transition: 0.4s;
+}
+
+.float-card:hover {
+  transform: translateY(-12px);
+}
