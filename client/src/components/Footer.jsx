@@ -48,7 +48,8 @@ function Footer() {
           fontSize: "18px",
         }}
       >
-        © 2026 SRH Fan Website. All Rights Reserved.
+        SRH Fan Club 
+        Orange Army
       </p>
     </footer>
   );
