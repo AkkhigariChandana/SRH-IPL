@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 import Navbar from "../components/Navbar";
 
 function Login() {
@@ -26,11 +27,18 @@ const handleSubmit = async () => {
     return;
   }
 
-  alert("Login Successful");
-
-  localStorage.setItem("user", email);
-
-  window.location.href = "/";
+  try {
+    const response = await axios.post("/api/auth/login", { email });
+    
+    if (response.data) {
+      alert("Login Successful");
+      localStorage.setItem("user", email);
+      window.location.href = "/";
+    }
+  } catch (error) {
+    console.error("Login failed:", error);
+    alert("Error logging in. Please try again.");
+  }
 };
   return (
     <div

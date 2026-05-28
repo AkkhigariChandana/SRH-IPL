@@ -7,12 +7,16 @@ const mongoose = require("mongoose");
 const app = express();
 
 const playerRoutes = require("./routes/PlayerRoutes");
+const authRoutes = require("./routes/AuthRoutes");
+const pollRoutes = require("./routes/PollRoutes");
 
 app.use(cors());
 
 app.use(express.json());
 
 app.use("/api/players", playerRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/poll", pollRoutes);
 
 // ---------- Serve React build (production) ----------
 app.use(express.static(path.join(__dirname, "../client/dist")));
