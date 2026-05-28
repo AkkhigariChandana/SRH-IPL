@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 
 const app = express();
 
-const playerRoutes = require("./routes/playerRoutes");
+const playerRoutes = require("./routes/PlayerRoutes");
 
 app.use(cors());
 
