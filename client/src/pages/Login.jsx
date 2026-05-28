@@ -80,7 +80,7 @@ const handleSubmit = async () => {
         />
 
         <button
-          onClick={handleLogin}
+          onClick={handleSubmit}
           style={buttonStyle}
         >
           Login
