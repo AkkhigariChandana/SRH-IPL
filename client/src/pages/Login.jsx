@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import Navbar from "../components/Navbar";
-import loginBg from "../assets/login-bg.jpg";
+import loginBg from "../assets/login-bg-players.jpg";
 
 function Login() {
   const [view, setView] = useState("login"); // login, signup, forgot, otp, reset
@@ -90,7 +90,7 @@ function Login() {
         overflowX: "hidden",
       }}
     >
-      {/* BACKGROUND IMAGE OVERLAY */}
+      {/* BACKGROUND IMAGE */}
       <div
         style={{
           position: "absolute",
@@ -102,7 +102,7 @@ function Login() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          opacity: 0.35,
+          opacity: 1, // Full opacity so the players are fully visible
           zIndex: 0,
         }}
       ></div>
@@ -110,20 +110,19 @@ function Login() {
       <div style={{ position: "relative", zIndex: 1 }}>
         <Navbar />
 
-        <div style={{ perspective: "1000px", marginTop: "80px" }}>
+        <div style={{ perspective: "1000px", marginTop: "80px", display: "flex", justifyContent: "center" }}>
           <div
             style={{
+              width: "100%",
               maxWidth: "500px",
-              margin: "0 auto",
-              padding: "40px",
-              background: "linear-gradient(to bottom, rgba(26,0,0,0.85), rgba(0,0,0,0.95))",
+              padding: "50px",
+              background: "rgba(10, 0, 0, 0.95)", // Solid dark to cover the drawn UI in the background image
               borderRadius: "25px",
-              border: "2px solid #ff6600",
-              boxShadow: "0 0 40px rgba(255,102,0,0.5)",
-              backdropFilter: "blur(5px)",
+              border: "3px solid #ff6600",
+              boxShadow: "0 0 50px rgba(255,102,0,0.8)",
               transition: "transform 0.8s",
               transformStyle: "preserve-3d",
-              transform: isFlipped ? "rotateY(90deg)" : "rotateY(0deg)", // Fake flip effect by rotating halfway, swapping content, rotating back
+              transform: isFlipped ? "rotateY(90deg)" : "rotateY(0deg)",
             }}
           >
             {/* LOGIN VIEW */}
