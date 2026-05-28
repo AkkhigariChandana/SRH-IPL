@@ -51,12 +51,11 @@ function Navbar() {
         }}
       >
         <img
-          src={logo}cd client
-          
+          src={logo}
           alt="SRH Logo"
           style={{
-            width: "70px",
-            height: "70px",
+            width: "50px",
+            height: "50px",
             objectFit: "contain",
 
             filter:
@@ -68,7 +67,7 @@ function Navbar() {
           style={{
             color: "#ff6600",
 
-            fontSize: "70px",
+            fontSize: "40px",
 
             fontWeight: "bold",
 
