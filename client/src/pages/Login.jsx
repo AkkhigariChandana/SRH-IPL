@@ -113,8 +113,8 @@ function Login() {
           <div
             style={{
               width: "100%",
-              maxWidth: "500px", 
-              padding: "40px", 
+              maxWidth: "var(--login-box-width)", 
+              padding: "var(--login-padding)", 
               background: "transparent", 
               borderRadius: "0",
               border: "none", 
@@ -207,7 +207,7 @@ function Login() {
 const titleStyle = {
   textAlign: "center",
   color: "#ff6600",
-  fontSize: "45px",
+  fontSize: "var(--login-title)",
   marginBottom: "20px"
 };
 

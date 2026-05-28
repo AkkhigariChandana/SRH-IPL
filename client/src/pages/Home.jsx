@@ -100,12 +100,9 @@ function Home() {
         >
           <h1
             style={{
-              fontSize: "120px",
-
+              fontSize: "var(--hero-title)",
               fontWeight: "bold",
-
-              lineHeight: "120px",
-
+              lineHeight: "var(--hero-line-height)",
               textShadow:
                 "0 0 25px rgba(255,255,255,0.5)",
             }}
@@ -130,10 +127,8 @@ function Home() {
 
           <p
             style={{
-              fontSize: "38px",
-
+              fontSize: "var(--hero-subtitle)",
               marginTop: "25px",
-
               color: "#ffe0b3",
 
               textShadow:
@@ -149,11 +144,8 @@ function Home() {
             <button
               style={{
                 marginTop: "45px",
-
-                padding: "20px 55px",
-
-                fontSize: "28px",
-
+                padding: "var(--button-padding)",
+                fontSize: "var(--button-font)",
                 border: "none",
 
                 borderRadius: "50px",

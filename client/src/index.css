@@ -1,3 +1,37 @@
+:root {
+  --hero-title: 120px;
+  --hero-subtitle: 38px;
+  --login-title: 45px;
+  --card-width: 350px;
+  --nav-padding: 20px 50px;
+  --logo-size: 50px;
+  --nav-title: 40px;
+  --button-padding: 20px 55px;
+  --button-font: 28px;
+  --hero-line-height: 120px;
+  --login-box-width: 500px;
+  --login-padding: 40px;
+  --grid-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (max-width: 768px) {
+  :root {
+    --hero-title: 50px;
+    --hero-subtitle: 20px;
+    --login-title: 32px;
+    --card-width: 100%;
+    --nav-padding: 15px 20px;
+    --logo-size: 35px;
+    --nav-title: 28px;
+    --button-padding: 12px 25px;
+    --button-font: 18px;
+    --hero-line-height: 55px;
+    --login-box-width: 90%;
+    --login-padding: 25px;
+    --grid-columns: 1fr;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -58,4 +92,42 @@ button:hover {
 .schedule-card:hover {
   transform: scale(1.02);
   border: 1px solid #ff8533 !important;
+}
+
+/* HAMBURGER MENU STYLES */
+.nav-links {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    gap: 20px;
+    border-bottom: 2px solid #ff6600;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
 }

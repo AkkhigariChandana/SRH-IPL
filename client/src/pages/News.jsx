@@ -55,7 +55,7 @@ function News() {
         <h1
           style={{
             color: "#ff6600",
-            fontSize: "80px",
+            fontSize: "var(--hero-title)",
             fontWeight: "bold",
           }}
         >
@@ -65,7 +65,7 @@ function News() {
         <p
           style={{
             color: "#ffcc99",
-            fontSize: "28px",
+            fontSize: "var(--hero-subtitle)",
             marginTop: "10px",
           }}
         >
@@ -78,8 +78,7 @@ function News() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns:
-            "repeat(auto-fit, minmax(350px, 1fr))",
+          gridTemplateColumns: "var(--grid-columns)",
           gap: "40px",
           padding: "70px 40px",
         }}
@@ -115,8 +114,8 @@ function News() {
             >
               <h2
                 style={{
-                  fontSize: "34px",
-                  lineHeight: "48px",
+                  fontSize: "var(--nav-title)",
+                  lineHeight: "1.2",
                 }}
               >
                 {news.title}

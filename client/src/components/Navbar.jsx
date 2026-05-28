@@ -4,6 +4,7 @@ import logo from "../assets/logo.png";
 
 function Navbar({ transparent = false }) {
   const [showWelcome, setShowWelcome] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const user = localStorage.getItem("user");
 
   useEffect(() => {
@@ -33,7 +34,7 @@ function Navbar({ transparent = false }) {
     <div
       style={{
         background: transparent ? "transparent" : "#000",
-        padding: "20px 50px",
+        padding: "var(--nav-padding)",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
@@ -62,8 +63,8 @@ function Navbar({ transparent = false }) {
           src={logo}
           alt="SRH Logo"
           style={{
-            width: "50px",
-            height: "50px",
+            width: "var(--logo-size)",
+            height: "var(--logo-size)",
             objectFit: "contain",
 
             filter:
@@ -74,9 +75,7 @@ function Navbar({ transparent = false }) {
         <h1
           style={{
             color: "#ff6600",
-
-            fontSize: "40px",
-
+            fontSize: "var(--nav-title)",
             fontWeight: "bold",
 
             textShadow:
@@ -102,15 +101,16 @@ function Navbar({ transparent = false }) {
         </div>
       )}
 
-      {/* NAV LINKS */}
-
-      <div
-        style={{
-          display: "flex",
-
-          gap: "40px",
-        }}
+      {/* HAMBURGER BUTTON */}
+      <button 
+        className="hamburger" 
+        onClick={() => setMenuOpen(!menuOpen)}
       >
+        ☰
+      </button>
+
+      {/* NAV LINKS */}
+      <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
         <Link className="nav-link" style={linkStyle} to="/">
           Home
         </Link>

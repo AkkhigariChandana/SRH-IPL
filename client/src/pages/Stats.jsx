@@ -53,7 +53,7 @@ function Stats() {
         <h1
           style={{
             color: "#ff6600",
-            fontSize: "90px",
+            fontSize: "var(--hero-title)",
             fontWeight: "bold",
             textShadow:
               "0 0 25px rgba(255,102,0,0.8)",
@@ -65,7 +65,7 @@ function Stats() {
         <p
           style={{
             color: "#ffb366",
-            fontSize: "30px",
+            fontSize: "var(--hero-subtitle)",
             marginTop: "10px",
           }}
         >
@@ -78,10 +78,7 @@ function Stats() {
       <div
         style={{
           display: "grid",
-
-          gridTemplateColumns:
-            "repeat(auto-fit, minmax(280px, 1fr))",
-
+          gridTemplateColumns: "var(--grid-columns)",
           gap: "40px",
 
           padding: "70px 40px",
@@ -127,11 +124,9 @@ function Stats() {
 
             <h2
               style={{
-                fontSize: "40px",
-
+                fontSize: "var(--nav-title)",
                 marginBottom: "30px",
-
-                lineHeight: "50px",
+                lineHeight: "1.2",
               }}
             >
               {item.title}
@@ -141,13 +136,10 @@ function Stats() {
 
             <h1
               style={{
-                fontSize: "48px",
-
+                fontSize: "var(--login-title)",
                 fontWeight: "bold",
-
                 wordBreak: "break-word",
-
-                lineHeight: "60px",
+                lineHeight: "1.2",
               }}
             >
               {item.value}

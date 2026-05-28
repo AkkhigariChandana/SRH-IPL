@@ -99,7 +99,7 @@ function Squad() {
         <h1
           style={{
             color: "#ff6600",
-            fontSize: "90px",
+            fontSize: "var(--hero-title)",
             fontWeight: "bold",
             textShadow:
               "0 0 25px rgba(255,102,0,0.8)",
@@ -111,7 +111,7 @@ function Squad() {
         <p
           style={{
             color: "#ffb366",
-            fontSize: "35px",
+            fontSize: "var(--hero-subtitle)",
             marginTop: "10px",
           }}
         >
@@ -124,10 +124,7 @@ function Squad() {
       <div
         style={{
           display: "grid",
-
-          gridTemplateColumns:
-            "repeat(auto-fit, minmax(300px, 1fr))",
-
+          gridTemplateColumns: "var(--grid-columns)",
           gap: "40px",
 
           padding: "70px 40px",
@@ -146,11 +143,8 @@ function Squad() {
               border: "2px solid #ff6600",
 
               borderRadius: "30px",
-
               padding: "30px",
-
-              width: "280px",
-
+              width: "var(--card-width)",
               minHeight: "420px",
 
               textAlign: "center",
@@ -178,8 +172,8 @@ function Squad() {
             <h2
               style={{
                 marginTop: "20px",
-                fontSize: "38px",
-                lineHeight: "45px",
+                fontSize: "var(--nav-title)",
+                lineHeight: "1.2",
               }}
             >
               {player.name}
@@ -218,7 +212,7 @@ function Squad() {
         >
           <div
             style={{
-              width: "50%",
+              width: "var(--login-box-width)",
               background: "linear-gradient(to bottom, #1a0000, #000)",
               border: "2px solid #ff6600",
               borderRadius: "20px",
