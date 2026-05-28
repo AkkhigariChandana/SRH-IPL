@@ -110,16 +110,16 @@ function Login() {
       <div style={{ position: "relative", zIndex: 1 }}>
         <Navbar />
 
-        <div style={{ perspective: "1000px", marginTop: "80px", display: "flex", justifyContent: "center" }}>
+        <div style={{ perspective: "1000px", marginTop: "40px", display: "flex", justifyContent: "center" }}>
           <div
             style={{
               width: "100%",
-              maxWidth: "500px",
-              padding: "50px",
-              background: "rgba(10, 0, 0, 0.95)", // Solid dark to cover the drawn UI in the background image
+              maxWidth: "650px",
+              padding: "60px",
+              background: "#080808", // Solid dark to fully cover the drawn UI
               borderRadius: "25px",
               border: "3px solid #ff6600",
-              boxShadow: "0 0 50px rgba(255,102,0,0.8)",
+              boxShadow: "0 0 80px rgba(255,102,0,0.7)",
               transition: "transform 0.8s",
               transformStyle: "preserve-3d",
               transform: isFlipped ? "rotateY(90deg)" : "rotateY(0deg)",
