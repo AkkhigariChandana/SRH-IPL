@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import Navbar from "../components/Navbar";
-import loginBg from "../assets/login-bg-players.jpg";
+import loginBg from "../assets/login-bg-new.jpg";
 
 function Login() {
   const [view, setView] = useState("login"); // login, signup, forgot, otp, reset
@@ -97,26 +97,26 @@ function Login() {
       <div
         style={{
           flex: 1,
+          position: "relative",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           backgroundImage: `url(${loginBg})`,
-          backgroundSize: "cover",
+          backgroundSize: "cover", // Cover ensures no blank black spaces on the sides
           backgroundPosition: "center top",
           backgroundRepeat: "no-repeat",
-          padding: "20px",
         }}
       >
-        <div style={{ perspective: "1000px", width: "100%", display: "flex", justifyContent: "center" }}>
+        <div style={{ perspective: "1000px", width: "100%", display: "flex", justifyContent: "center", transform: "translateY(-30px)" }}>
           <div
             style={{
               width: "100%",
-              maxWidth: "650px",
-              padding: "60px",
-              background: "#080808", // Solid dark to fully cover the drawn UI
-              borderRadius: "25px",
-              border: "3px solid #ff6600",
-              boxShadow: "0 0 80px rgba(255,102,0,0.7)",
+              maxWidth: "600px", // Perfect width to cover painted frame
+              padding: "50px",
+              background: "#080808", // Solid black to perfectly hide the fake UI
+              borderRadius: "20px",
+              border: "3px solid #ff6600", // Orange border matches the aesthetic
+              boxShadow: "0 0 50px rgba(255,102,0,0.6)",
               transition: "transform 0.8s",
               transformStyle: "preserve-3d",
               transform: isFlipped ? "rotateY(90deg)" : "rotateY(0deg)",
