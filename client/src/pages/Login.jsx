@@ -113,12 +113,13 @@ function Login() {
           <div
             style={{
               width: "100%",
-              maxWidth: "450px", // Shrunk perfectly to fit inside the painted frame width
-              padding: "20px 0", // Reduced padding
-              background: "transparent", // Completely transparent to let the painted box be the UI
-              borderRadius: "0",
-              border: "none", // Removed HTML border
-              boxShadow: "none", // Removed HTML shadow
+              maxWidth: "500px", 
+              padding: "40px", 
+              background: "rgba(10, 5, 0, 0.7)", 
+              backdropFilter: "blur(12px)", 
+              borderRadius: "20px",
+              border: "2px solid rgba(255,102,0,0.5)", 
+              boxShadow: "0 0 30px rgba(255,102,0,0.3)",
               transition: "transform 0.8s",
               transformStyle: "preserve-3d",
               transform: isFlipped ? "rotateY(90deg)" : "rotateY(0deg)",
@@ -127,6 +128,7 @@ function Login() {
             {/* LOGIN VIEW */}
             {view === "login" && (
               <div>
+                <h1 style={titleStyle}>Login</h1>
                 <input type="email" placeholder="Enter Email" value={email} onChange={(e) => setEmail(e.target.value)} style={inputStyle} />
                 <input type="password" placeholder="Enter Password" value={password} onChange={(e) => setPassword(e.target.value)} style={inputStyle} />
                 
