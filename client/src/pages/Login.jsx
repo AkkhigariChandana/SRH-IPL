@@ -100,7 +100,7 @@ function Login() {
           height: "100%",
           backgroundImage: `url(${loginBg})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "top center",
           backgroundRepeat: "no-repeat",
           opacity: 1, // Full opacity so the players are fully visible
           zIndex: 0,
