@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
-function Navbar() {
+function Navbar({ transparent = false }) {
   const [showWelcome, setShowWelcome] = useState(false);
   const user = localStorage.getItem("user");
 
@@ -32,25 +32,18 @@ function Navbar() {
   return (
     <div
       style={{
-        background: "#000",
-
+        background: transparent ? "transparent" : "#000",
         padding: "20px 50px",
-
         display: "flex",
-
         justifyContent: "space-between",
-
         alignItems: "center",
-
-        borderBottom: "2px solid #ff6600",
-
-        boxShadow:
-          "0 5px 25px rgba(255,102,0,0.3)",
-
-        position: "sticky",
-
+        borderBottom: transparent ? "none" : "2px solid #ff6600",
+        boxShadow: transparent ? "none" : "0 5px 25px rgba(255,102,0,0.3)",
+        position: transparent ? "absolute" : "sticky",
         top: "0",
-
+        left: "0",
+        width: "100%",
+        boxSizing: "border-box", // Prevents padding from making it wider than 100%
         zIndex: "1000",
       }}
     >

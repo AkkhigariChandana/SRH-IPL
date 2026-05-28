@@ -83,40 +83,42 @@ function Login() {
   return (
     <div
       style={{
+        position: "relative",
         minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
         backgroundColor: "#000",
         color: "white",
+        overflowX: "hidden",
       }}
     >
-      {/* NAVBAR AT THE VERY TOP */}
-      <Navbar />
-
-      {/* REMAINDER OF SCREEN (BACKGROUND + LOGIN BOX) */}
+      {/* FULL SCREEN BACKGROUND IMAGE */}
       <div
         style={{
-          flex: 1,
-          position: "relative",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
           backgroundImage: `url(${loginBg})`,
-          backgroundSize: "cover", // Cover ensures no blank black spaces on the sides
-          backgroundPosition: "center top",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
+          zIndex: 0,
         }}
-      >
-        <div style={{ perspective: "1000px", width: "100%", display: "flex", justifyContent: "center", transform: "translateY(-30px)" }}>
+      ></div>
+
+      <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", justifyContent: "center", minHeight: "100vh" }}>
+        <Navbar transparent={true} />
+
+        <div style={{ perspective: "1000px", width: "100%", display: "flex", justifyContent: "center" }}>
           <div
             style={{
               width: "100%",
-              maxWidth: "600px", // Perfect width to cover painted frame
-              padding: "50px",
-              background: "#080808", // Solid black to perfectly hide the fake UI
-              borderRadius: "20px",
-              border: "3px solid #ff6600", // Orange border matches the aesthetic
-              boxShadow: "0 0 50px rgba(255,102,0,0.6)",
+              maxWidth: "450px", // Shrunk perfectly to fit inside the painted frame width
+              padding: "20px 0", // Reduced padding
+              background: "transparent", // Completely transparent to let the painted box be the UI
+              borderRadius: "0",
+              border: "none", // Removed HTML border
+              boxShadow: "none", // Removed HTML shadow
               transition: "transform 0.8s",
               transformStyle: "preserve-3d",
               transform: isFlipped ? "rotateY(90deg)" : "rotateY(0deg)",
@@ -125,7 +127,6 @@ function Login() {
             {/* LOGIN VIEW */}
             {view === "login" && (
               <div>
-                <h1 style={titleStyle}>Login</h1>
                 <input type="email" placeholder="Enter Email" value={email} onChange={(e) => setEmail(e.target.value)} style={inputStyle} />
                 <input type="password" placeholder="Enter Password" value={password} onChange={(e) => setPassword(e.target.value)} style={inputStyle} />
                 
