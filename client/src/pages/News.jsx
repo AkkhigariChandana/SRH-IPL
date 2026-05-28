@@ -14,7 +14,7 @@ function News() {
         "Pat Cummins leads SRH bowling attack brilliantly",
       image: pat,
       link:
-        "https://www.google.com/search?q=Pat+Cummins+SRH+news",
+        "https://www.espncricinfo.com/cricketers/pat-cummins-489889/news",
     },
 
     {
@@ -22,7 +22,7 @@ function News() {
         "Heinrich Klaasen climbs Orange Cap rankings",
       image: klaasen,
       link:
-        "https://www.google.com/search?q=Heinrich+Klaasen+SRH+news",
+        "https://www.espncricinfo.com/cricketers/heinrich-klaasen-436757/news",
     },
 
     {
@@ -30,7 +30,7 @@ function News() {
         "SRH wins thrilling IPL clash with explosive batting display",
       image: hero,
       link:
-        "https://www.google.com/search?q=SRH+vs+match+highlights",
+        "https://www.iplt20.com/video/highlights",
     },
   ];
 
