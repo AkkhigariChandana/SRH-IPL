@@ -97,7 +97,7 @@ function Login() {
           top: 90,
           left: 0,
           width: "100%",
-          height: "99%",
+          height: "95%",
           backgroundImage: `url(${loginBg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
