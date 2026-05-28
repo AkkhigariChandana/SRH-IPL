@@ -6,6 +6,12 @@ const UserSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
+  name: { type: String },
+  mobile: { type: String },
+  password: { type: String },
+  city: { type: String },
+  resetOtp: { type: String },
+  resetOtpExpires: { type: Date },
   lastVotedWeek: {
     type: String,
     default: null, // format like "2023-W42"
